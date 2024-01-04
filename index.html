@@ -1,0 +1,67 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container"></div>
+    <button onclick="startSorting('insertionSort')">Insertion Sort</button>
+    <button onclick="startSorting('selectionSort')">Selection Sort</button>
+    <button onclick="startSorting('bubbleSort')">Bubble Sort</button>
+    <button onclick="randomizeArray('randomizeArray')">Randomize Array</button>
+    <button onclick="startSorting('mergeSort')">Merge Sort</button>
+    <button onclick="startSorting('quickSort')">Quick Sort</button>
+    <button onclick="startSorting('shellSort')">Shell Sort</button>
+
+    <script src="sortingAlgorithms.js"></script>
+    <script src="visualization.js"></script>
+    <script>
+        function startSorting(algorithm) {
+            const array = [320, 32, 12, 1, 434, 5, 17, 7, 2, 3, 7];
+
+            // Randomize the array before sorting
+            randomizeArray(array);
+
+            // Triggering the selected sorting algorithm
+            switch (algorithm) {
+                case 'insertionSort':
+                    insertionSort(array);
+                    break;
+                case 'selectionSort':
+                    selectionSort(array);
+                    break;
+                case 'bubbleSort':
+                    bubbleSort(array);
+                    break;
+
+                case 'mergeSort':
+                    mergeSort(array);
+                    break;
+
+                case 'quickSort':
+                    quickSort(array);
+                    break;
+
+                case 'shellSort':
+                    shellSort(array);
+                    break;
+
+                case 'randomizeArray':
+                    randomizeArray(array);
+                    break;
+
+
+                default:
+                    console.error('Invalid algorithm');
+            }
+        }
+    </script>
+</body>
+
+</html>

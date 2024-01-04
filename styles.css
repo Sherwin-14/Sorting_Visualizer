@@ -1,0 +1,11 @@
+#container {
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+}
+
+.bar {
+    width: 20px;
+    margin: 0 1px;
+    background-color: green;
+}
