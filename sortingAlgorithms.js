@@ -8,7 +8,7 @@ async function randomizeArray(array) {
     }
     visualizeBars(array);
 }
-
+// Insertion Sort
 async function insertionSort(array) {
     for (let i = 1; i < array.length; i++) {
         let key = array[i];
@@ -26,7 +26,7 @@ async function insertionSort(array) {
         }, 100));
     }
 }
-
+// Selection Sort
 async function selectionSort(array) {
     for (let i = 0; i < array.length - 1; i++) {
         let minIndex = i;
@@ -45,7 +45,7 @@ async function selectionSort(array) {
         }, 100));
     }
 }
-
+// Bubble Sort
 async function bubbleSort(array) {
     const n = array.length;
 
